@@ -22,7 +22,7 @@
 		225967F62A224E5700B7AF5E /* GeocodingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225967F52A224E5700B7AF5E /* GeocodingService.swift */; };
 		225967F92A224ECA00B7AF5E /* GeocodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225967F82A224ECA00B7AF5E /* GeocodingError.swift */; };
 		225967FB2A22515400B7AF5E /* WebConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225967FA2A22515400B7AF5E /* WebConstants.swift */; };
-		225967FD2A22556400B7AF5E /* ErrorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225967FC2A22556400B7AF5E /* ErrorInfo.swift */; };
+		225967FD2A22556400B7AF5E /* AlertInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225967FC2A22556400B7AF5E /* AlertInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +42,7 @@
 		225967F52A224E5700B7AF5E /* GeocodingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingService.swift; sourceTree = "<group>"; };
 		225967F82A224ECA00B7AF5E /* GeocodingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingError.swift; sourceTree = "<group>"; };
 		225967FA2A22515400B7AF5E /* WebConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebConstants.swift; sourceTree = "<group>"; };
-		225967FC2A22556400B7AF5E /* ErrorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorInfo.swift; sourceTree = "<group>"; };
+		225967FC2A22556400B7AF5E /* AlertInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				225967F82A224ECA00B7AF5E /* GeocodingError.swift */,
-				225967FC2A22556400B7AF5E /* ErrorInfo.swift */,
+				225967FC2A22556400B7AF5E /* AlertInfo.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -207,7 +207,7 @@
 			files = (
 				225967E42A223C1700B7AF5E /* AppState.swift in Sources */,
 				225967E82A223C7200B7AF5E /* AppStore.swift in Sources */,
-				225967FD2A22556400B7AF5E /* ErrorInfo.swift in Sources */,
+				225967FD2A22556400B7AF5E /* AlertInfo.swift in Sources */,
 				225967EA2A223CC100B7AF5E /* Reducer.swift in Sources */,
 				225967ED2A22411F00B7AF5E /* SearchView.swift in Sources */,
 				225967FB2A22515400B7AF5E /* WebConstants.swift in Sources */,
