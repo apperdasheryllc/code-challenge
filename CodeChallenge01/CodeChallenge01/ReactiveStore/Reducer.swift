@@ -24,7 +24,16 @@ let appReducer: Reducer<AppState, Action> = { state, action in
         break
         
     case .didFetchGeocodingData(let data):
-        print("decode data")
+        do {
+            let jsonDecoder = JSONDecoder()
+            let geocodeJSON = try jsonDecoder.decode([GeocodeLocationJSON].self, from: data)
+            mutatingState.geocodeLocations = geocodeJSON
+        } catch {
+            mutatingState.alertInfo = AlertInfo(
+                title: "Decoding Error",
+                description: error.localizedDescription
+            )
+        }
         
     case .errorOccurred(let error):
         mutatingState.alertInfo = AlertInfo(

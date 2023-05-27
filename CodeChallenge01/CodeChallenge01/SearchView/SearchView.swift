@@ -28,6 +28,18 @@ struct SearchView: View {
     var body: some View {
         VStack {
             LocalSearchBar(text: searchQueryBinding, onSearch: handleSearch)
+            
+            List(store.state.geocodeLocations) { location in
+                VStack(alignment: .leading) {
+                    Text(location.name)
+                    
+                    HStack {
+                        Text(location.state)
+                        Text(location.country)
+                    }
+                    .font(.subheadline)
+                }
+            }
         }
         .alert(item: alertBinding) { details in
             Alert(

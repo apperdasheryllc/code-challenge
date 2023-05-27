@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		221FBD4B2A226647009C169B /* GeocodeResponseJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221FBD4A2A226647009C169B /* GeocodeResponseJSON.swift */; };
 		225967D52A22397F00B7AF5E /* CodeChallenge01App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225967D42A22397F00B7AF5E /* CodeChallenge01App.swift */; };
 		225967D72A22397F00B7AF5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225967D62A22397F00B7AF5E /* ContentView.swift */; };
 		225967D92A22398000B7AF5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 225967D82A22398000B7AF5E /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		221FBD4A2A226647009C169B /* GeocodeResponseJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodeResponseJSON.swift; sourceTree = "<group>"; };
 		225967D12A22397F00B7AF5E /* CodeChallenge01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeChallenge01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		225967D42A22397F00B7AF5E /* CodeChallenge01App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeChallenge01App.swift; sourceTree = "<group>"; };
 		225967D62A22397F00B7AF5E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		221FBD492A226632009C169B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				221FBD4A2A226647009C169B /* GeocodeResponseJSON.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		225967C82A22397F00B7AF5E = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +85,7 @@
 		225967D32A22397F00B7AF5E /* CodeChallenge01 */ = {
 			isa = PBXGroup;
 			children = (
+				221FBD492A226632009C169B /* Model */,
 				225967F72A224EB900B7AF5E /* Error */,
 				225967F22A224E1600B7AF5E /* Middleware */,
 				225967EB2A22410600B7AF5E /* SearchView */,
@@ -206,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				225967E42A223C1700B7AF5E /* AppState.swift in Sources */,
+				221FBD4B2A226647009C169B /* GeocodeResponseJSON.swift in Sources */,
 				225967E82A223C7200B7AF5E /* AppStore.swift in Sources */,
 				225967FD2A22556400B7AF5E /* AlertInfo.swift in Sources */,
 				225967EA2A223CC100B7AF5E /* Reducer.swift in Sources */,
