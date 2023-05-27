@@ -15,6 +15,14 @@
 		225967E62A223C3000B7AF5E /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225967E52A223C3000B7AF5E /* Action.swift */; };
 		225967E82A223C7200B7AF5E /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225967E72A223C7200B7AF5E /* AppStore.swift */; };
 		225967EA2A223CC100B7AF5E /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225967E92A223CC100B7AF5E /* Reducer.swift */; };
+		225967ED2A22411F00B7AF5E /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225967EC2A22411F00B7AF5E /* SearchView.swift */; };
+		225967EF2A22418E00B7AF5E /* LocalSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225967EE2A22418E00B7AF5E /* LocalSearchBar.swift */; };
+		225967F12A22425A00B7AF5E /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225967F02A22425A00B7AF5E /* SearchCoordinator.swift */; };
+		225967F42A224E2E00B7AF5E /* GeocodingMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225967F32A224E2E00B7AF5E /* GeocodingMiddleware.swift */; };
+		225967F62A224E5700B7AF5E /* GeocodingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225967F52A224E5700B7AF5E /* GeocodingService.swift */; };
+		225967F92A224ECA00B7AF5E /* GeocodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225967F82A224ECA00B7AF5E /* GeocodingError.swift */; };
+		225967FB2A22515400B7AF5E /* WebConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225967FA2A22515400B7AF5E /* WebConstants.swift */; };
+		225967FD2A22556400B7AF5E /* ErrorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225967FC2A22556400B7AF5E /* ErrorInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +35,14 @@
 		225967E52A223C3000B7AF5E /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		225967E72A223C7200B7AF5E /* AppStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore.swift; sourceTree = "<group>"; };
 		225967E92A223CC100B7AF5E /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
+		225967EC2A22411F00B7AF5E /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		225967EE2A22418E00B7AF5E /* LocalSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSearchBar.swift; sourceTree = "<group>"; };
+		225967F02A22425A00B7AF5E /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
+		225967F32A224E2E00B7AF5E /* GeocodingMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingMiddleware.swift; sourceTree = "<group>"; };
+		225967F52A224E5700B7AF5E /* GeocodingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingService.swift; sourceTree = "<group>"; };
+		225967F82A224ECA00B7AF5E /* GeocodingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodingError.swift; sourceTree = "<group>"; };
+		225967FA2A22515400B7AF5E /* WebConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebConstants.swift; sourceTree = "<group>"; };
+		225967FC2A22556400B7AF5E /* ErrorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +75,9 @@
 		225967D32A22397F00B7AF5E /* CodeChallenge01 */ = {
 			isa = PBXGroup;
 			children = (
+				225967F72A224EB900B7AF5E /* Error */,
+				225967F22A224E1600B7AF5E /* Middleware */,
+				225967EB2A22410600B7AF5E /* SearchView */,
 				225967E22A223BBC00B7AF5E /* ReactiveStore */,
 				225967D42A22397F00B7AF5E /* CodeChallenge01App.swift */,
 				225967D62A22397F00B7AF5E /* ContentView.swift */,
@@ -85,6 +104,35 @@
 				225967E92A223CC100B7AF5E /* Reducer.swift */,
 			);
 			path = ReactiveStore;
+			sourceTree = "<group>";
+		};
+		225967EB2A22410600B7AF5E /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				225967EC2A22411F00B7AF5E /* SearchView.swift */,
+				225967EE2A22418E00B7AF5E /* LocalSearchBar.swift */,
+				225967F02A22425A00B7AF5E /* SearchCoordinator.swift */,
+			);
+			path = SearchView;
+			sourceTree = "<group>";
+		};
+		225967F22A224E1600B7AF5E /* Middleware */ = {
+			isa = PBXGroup;
+			children = (
+				225967F32A224E2E00B7AF5E /* GeocodingMiddleware.swift */,
+				225967F52A224E5700B7AF5E /* GeocodingService.swift */,
+				225967FA2A22515400B7AF5E /* WebConstants.swift */,
+			);
+			path = Middleware;
+			sourceTree = "<group>";
+		};
+		225967F72A224EB900B7AF5E /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				225967F82A224ECA00B7AF5E /* GeocodingError.swift */,
+				225967FC2A22556400B7AF5E /* ErrorInfo.swift */,
+			);
+			path = Error;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,10 +207,18 @@
 			files = (
 				225967E42A223C1700B7AF5E /* AppState.swift in Sources */,
 				225967E82A223C7200B7AF5E /* AppStore.swift in Sources */,
+				225967FD2A22556400B7AF5E /* ErrorInfo.swift in Sources */,
 				225967EA2A223CC100B7AF5E /* Reducer.swift in Sources */,
+				225967ED2A22411F00B7AF5E /* SearchView.swift in Sources */,
+				225967FB2A22515400B7AF5E /* WebConstants.swift in Sources */,
+				225967F12A22425A00B7AF5E /* SearchCoordinator.swift in Sources */,
+				225967F62A224E5700B7AF5E /* GeocodingService.swift in Sources */,
 				225967E62A223C3000B7AF5E /* Action.swift in Sources */,
+				225967EF2A22418E00B7AF5E /* LocalSearchBar.swift in Sources */,
+				225967F92A224ECA00B7AF5E /* GeocodingError.swift in Sources */,
 				225967D72A22397F00B7AF5E /* ContentView.swift in Sources */,
 				225967D52A22397F00B7AF5E /* CodeChallenge01App.swift in Sources */,
+				225967F42A224E2E00B7AF5E /* GeocodingMiddleware.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

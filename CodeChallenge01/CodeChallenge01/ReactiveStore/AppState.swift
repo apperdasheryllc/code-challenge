@@ -7,9 +7,10 @@
 
 import Foundation
 
-
 protocol MyState {}
 
 struct AppState: MyState {
     var counter: Int = 0
+    var searchQuery: String = ""
+    var alertInfo: AlertInfo?
 }

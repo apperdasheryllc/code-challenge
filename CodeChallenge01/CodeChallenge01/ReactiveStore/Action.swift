@@ -9,4 +9,9 @@ import Foundation
 
 enum Action {
     case didTap
+    case search(text: String)
+    case startGeocodingRequest
+    case didFetchGeocodingData(_ data: Data)
+    case errorOccurred(error: Error)
+    case dismissAlert
 }

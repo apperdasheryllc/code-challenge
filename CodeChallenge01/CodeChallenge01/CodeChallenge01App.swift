@@ -9,7 +9,14 @@ import SwiftUI
 
 @main
 struct CodeChallenge01App: App {
-    let store = MyStore(initial: AppState(), reducer: appReducer)
+    let store = MyStore(
+        initial: AppState(),
+        reducer: appReducer,
+        middlewares: [
+            geocodingMiddleware(service: GeocodingService())
+        ]
+    )
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

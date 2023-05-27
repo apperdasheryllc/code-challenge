@@ -16,6 +16,25 @@ let appReducer: Reducer<AppState, Action> = { state, action in
     switch action {
     case .didTap:
         mutatingState.counter += 1
+        
+    case .search(let text):
+        mutatingState.searchQuery = text
+        
+    case .startGeocodingRequest:
+        break
+        
+    case .didFetchGeocodingData(let data):
+        print("decode data")
+        
+    case .errorOccurred(let error):
+        mutatingState.alertInfo = AlertInfo(
+            title: "Geocoding Error",
+            description: error.localizedDescription
+        )
+        
+    case .dismissAlert:
+        mutatingState.alertInfo = nil
     }
+    
     return mutatingState
 }

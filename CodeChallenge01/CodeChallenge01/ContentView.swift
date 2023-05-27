@@ -12,10 +12,8 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            SearchView()
+            Text("search: \(store.state.searchQuery)")
             Text("count: \(store.state.counter)")
         }
         .padding()
