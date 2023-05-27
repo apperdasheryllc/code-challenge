@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct CodeChallenge01App: App {
+    let store = MyStore(initial: AppState(), reducer: appReducer)
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(store)
         }
     }
 }
