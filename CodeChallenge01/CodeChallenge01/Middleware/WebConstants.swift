@@ -9,5 +9,5 @@ import Foundation
 
 struct WebConstants {
     static let geocodingUrl = "https://api.openweathermap.org/geo/1.0/direct"
-    static let apiKey = "{api-key-goes-here}"
+    static let apiKey = "cacb3e88bdafafded03427240fde5c6e"
 }

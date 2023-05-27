@@ -35,7 +35,6 @@ func geocodingMiddleware(service: GeocodingService) -> Middleware<AppState, Acti
 }
 
 func getWebServiceUrlString(_ searchQuery: String) -> URL? {
-    //http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=cacb3e88bdafafded03427240fde5c6e
     var urlString = WebConstants.geocodingUrl
     urlString += "?q=\(searchQuery)"
     urlString += "&limit=5&appid="
