@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		220620302A2583C300211AB5 /* SearchNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2206202F2A2583C300211AB5 /* SearchNavigation.swift */; };
+		220620332A2585BD00211AB5 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220620322A2585BD00211AB5 /* WeatherView.swift */; };
+		220620352A258CC000211AB5 /* CurrentWeatherJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220620342A258CC000211AB5 /* CurrentWeatherJSON.swift */; };
 		221FBD4B2A226647009C169B /* GeocodeResponseJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221FBD4A2A226647009C169B /* GeocodeResponseJSON.swift */; };
 		225967D52A22397F00B7AF5E /* CodeChallenge01App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225967D42A22397F00B7AF5E /* CodeChallenge01App.swift */; };
 		225967D72A22397F00B7AF5E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225967D62A22397F00B7AF5E /* ContentView.swift */; };
@@ -27,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2206202F2A2583C300211AB5 /* SearchNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigation.swift; sourceTree = "<group>"; };
+		220620322A2585BD00211AB5 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		220620342A258CC000211AB5 /* CurrentWeatherJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherJSON.swift; sourceTree = "<group>"; };
 		221FBD4A2A226647009C169B /* GeocodeResponseJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocodeResponseJSON.swift; sourceTree = "<group>"; };
 		225967D12A22397F00B7AF5E /* CodeChallenge01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeChallenge01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		225967D42A22397F00B7AF5E /* CodeChallenge01App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeChallenge01App.swift; sourceTree = "<group>"; };
@@ -58,10 +64,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		220620312A2585AA00211AB5 /* WeatherView */ = {
+			isa = PBXGroup;
+			children = (
+				220620322A2585BD00211AB5 /* WeatherView.swift */,
+			);
+			path = WeatherView;
+			sourceTree = "<group>";
+		};
 		221FBD492A226632009C169B /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				221FBD4A2A226647009C169B /* GeocodeResponseJSON.swift */,
+				220620342A258CC000211AB5 /* CurrentWeatherJSON.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -85,6 +100,7 @@
 		225967D32A22397F00B7AF5E /* CodeChallenge01 */ = {
 			isa = PBXGroup;
 			children = (
+				220620312A2585AA00211AB5 /* WeatherView */,
 				221FBD492A226632009C169B /* Model */,
 				225967F72A224EB900B7AF5E /* Error */,
 				225967F22A224E1600B7AF5E /* Middleware */,
@@ -123,6 +139,7 @@
 				225967EC2A22411F00B7AF5E /* SearchView.swift */,
 				225967EE2A22418E00B7AF5E /* LocalSearchBar.swift */,
 				225967F02A22425A00B7AF5E /* SearchCoordinator.swift */,
+				2206202F2A2583C300211AB5 /* SearchNavigation.swift */,
 			);
 			path = SearchView;
 			sourceTree = "<group>";
@@ -221,8 +238,11 @@
 				225967E82A223C7200B7AF5E /* AppStore.swift in Sources */,
 				225967FD2A22556400B7AF5E /* AlertInfo.swift in Sources */,
 				225967EA2A223CC100B7AF5E /* Reducer.swift in Sources */,
+				220620332A2585BD00211AB5 /* WeatherView.swift in Sources */,
+				220620352A258CC000211AB5 /* CurrentWeatherJSON.swift in Sources */,
 				225967ED2A22411F00B7AF5E /* SearchView.swift in Sources */,
 				225967FB2A22515400B7AF5E /* WebConstants.swift in Sources */,
+				220620302A2583C300211AB5 /* SearchNavigation.swift in Sources */,
 				225967F12A22425A00B7AF5E /* SearchCoordinator.swift in Sources */,
 				225967F62A224E5700B7AF5E /* GeocodingService.swift in Sources */,
 				225967E62A223C3000B7AF5E /* Action.swift in Sources */,

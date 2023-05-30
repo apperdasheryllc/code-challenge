@@ -46,6 +46,21 @@ let appReducer: Reducer<AppState, Action> = { state, action in
         
     case .requestedLocation:
         print("get user location")
+        
+    case .didSelect(let location):
+        mutatingState.selectedLocation = location
+        
+    case .didFetchWeatherData(let data):
+        do {
+            let jsonDecoder = JSONDecoder()
+            let currentWeatherJSON = try jsonDecoder.decode(CurrentWeatherJSON.self, from: data)
+            mutatingState.currentWeather = currentWeatherJSON
+        } catch {
+            mutatingState.alertInfo = AlertInfo(
+                title: "Decoding Error",
+                description: error.localizedDescription
+            )
+        }
     }
     
     return mutatingState

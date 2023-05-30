@@ -13,7 +13,8 @@ func geocodingMiddleware(service: GeocodingService) -> Middleware<AppState, Acti
         switch action {
             
         case .startGeocodingRequest:
-            guard let url = getWebServiceUrlString(state.searchQuery) else {
+            let urlString = WebConstants.getGeocodeUrl(state.searchQuery)
+            guard let url = URL(string: urlString) else {
                 break
             }
             return service.fetchData(url: url)
@@ -27,21 +28,25 @@ func geocodingMiddleware(service: GeocodingService) -> Middleware<AppState, Acti
                 }
                 .eraseToAnyPublisher()
             
+        case .didSelect(let location):
+            let urlString = WebConstants.getWeatherUrl(lat: location.lat, lon: location.lon)
+            guard let url = URL(string: urlString) else {
+                break
+            }
+            return service.fetchData(url: url)
+                .subscribe(on: DispatchQueue.main)
+                .tryMap { value in
+                    Action.didFetchWeatherData(value)
+                }
+                .catch { error in
+                    return Just(Action.errorOccurred(error: error))
+                        .eraseToAnyPublisher()
+                }
+                .eraseToAnyPublisher()
+            
         default:
             break
         }
         return Empty().eraseToAnyPublisher()
     }
-}
-
-func getWebServiceUrlString(_ searchQuery: String) -> URL? {
-    var urlString = WebConstants.geocodingUrl
-    urlString += "?q=\(searchQuery)"
-    urlString += "&limit=5&appid="
-    urlString += WebConstants.apiKey
-    let normalizedString = WebConstants.getUrlString(inputString: urlString)
-    guard let url = URL(string: normalizedString) else {
-        return nil
-    }
-    return url
 }

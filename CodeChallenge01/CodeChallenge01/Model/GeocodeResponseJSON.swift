@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct GeocodeLocationJSON: Codable {
+struct GeocodeLocationJSON: Codable, Equatable, Hashable {
     let name: String
     let lat: Double
     let lon: Double

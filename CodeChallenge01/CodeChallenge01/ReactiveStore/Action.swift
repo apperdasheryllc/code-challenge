@@ -15,4 +15,6 @@ enum Action {
     case errorOccurred(error: Error)
     case dismissAlert
     case requestedLocation
+    case didSelect(_ location: GeocodeLocationJSON)
+    case didFetchWeatherData(_ data: Data)
 }

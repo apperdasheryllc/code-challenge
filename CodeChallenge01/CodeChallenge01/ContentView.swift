@@ -8,6 +8,8 @@
 import CoreLocationUI
 import SwiftUI
 
+let weatherView = WeatherView()
+
 struct ContentView: View {
     @EnvironmentObject var store: MyStore
     
@@ -15,7 +17,7 @@ struct ContentView: View {
         NavigationSplitView {
             SearchView()
         } detail: {
-            Text("Hello World")
+            weatherView
         }
     }
 }
