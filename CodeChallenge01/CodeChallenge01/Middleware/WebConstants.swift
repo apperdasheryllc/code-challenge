@@ -12,8 +12,6 @@ struct WebConstants {
     static let geocodingUrl = "https://api.openweathermap.org/geo/1.0/direct"
     static let reverseGeocodingUrl = "https://api.openweathermap.org/geo/1.0/reverse"
     
-    static let apiKey = "{api-key-goes-here}"
-    
     static func getUrlString(inputString: String) -> String {
         let trimmedString = inputString.trimmingCharacters(in: .whitespacesAndNewlines)
         guard
@@ -29,7 +27,7 @@ struct WebConstants {
         weatherUrl += "?lat=\(lat)"
         weatherUrl += "&lon=\(lon)"
         weatherUrl += "&units=imperial"
-        weatherUrl += "&appid=\(WebConstants.apiKey)"
+        weatherUrl += "&appid=\(apiKey)"
         let urlString = getUrlString(inputString: weatherUrl)
         return urlString
     }
@@ -39,7 +37,7 @@ struct WebConstants {
         var geocodingUrl = WebConstants.geocodingUrl
         geocodingUrl += "?q=\(searchQuery)"
         geocodingUrl += "&limit=5"
-        geocodingUrl += "&appid=\(WebConstants.apiKey)"
+        geocodingUrl += "&appid=\(apiKey)"
         let urlString = WebConstants.getUrlString(inputString: geocodingUrl)
         return urlString
     }
@@ -49,7 +47,7 @@ struct WebConstants {
         reverseGeocodeUrl += "?lat=\(lat)"
         reverseGeocodeUrl += "&lon=\(lon)"
         reverseGeocodeUrl += "&limit=5"
-        reverseGeocodeUrl += "&appid=\(WebConstants.apiKey)"
+        reverseGeocodeUrl += "&appid=\(apiKey)"
         let urlString = WebConstants.getUrlString(inputString: reverseGeocodeUrl)
         return urlString
     }

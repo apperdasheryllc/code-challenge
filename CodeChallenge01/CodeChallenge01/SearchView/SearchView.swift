@@ -57,17 +57,12 @@ struct SearchView: View {
                 weatherView
             }
             
-            Text("search: \(store.state.searchQuery)")
-            Text("count: \(store.state.counter)")
+            LocationButton() {
+                store.dispatch(.requestedLocation)
+            }
+            .cornerRadius(10.0)
         }
         .navigationTitle("Search")
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                LocationButton() {
-                    store.dispatch(.requestedLocation)
-                }
-            }
-        }
         .alert(item: alertBinding) { details in
             Alert(
                 title: Text(details.title),

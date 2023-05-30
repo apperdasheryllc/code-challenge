@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+let apiKey = "{api-key-goes-here}"
+
 @main
 struct CodeChallenge01App: App {
     let store = MyStore(
