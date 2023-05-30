@@ -13,7 +13,8 @@ struct CodeChallenge01App: App {
         initial: AppState(),
         reducer: appReducer,
         middlewares: [
-            geocodingMiddleware(service: GeocodingService())
+            geocodingMiddleware(service: GeocodingService()),
+            userLocationMiddleware(service: LocationManagerService())
         ]
     )
     

@@ -12,11 +12,18 @@ struct WeatherView: View {
     
     var body: some View {
         VStack {
-            Text("Weather View")
             Text(store.state.selectedLocation?.name ?? "")
+                .font(.title2)
             Text(store.state.currentWeatherMain)
+                .font(.title3)
             Text(store.state.currentWeatherDescription)
+                .font(.subheadline)
             Text(store.state.currentTempString)
+                .font(.title)
+            
+            if let url = URL(string: store.state.currentWeatherIconUrl) {
+                AsyncImage(url: url)
+            }
         }
     }
 }

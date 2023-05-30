@@ -5,6 +5,7 @@
 //  Created by Graham Diehl on 5/27/23.
 //
 
+import CoreLocation
 import Foundation
 
 enum Action {
@@ -17,4 +18,6 @@ enum Action {
     case requestedLocation
     case didSelect(_ location: GeocodeLocationJSON)
     case didFetchWeatherData(_ data: Data)
+    case foundUserLocation(location: CLLocation)
+    case didReverseGeocodeData(_ data: Data)
 }
