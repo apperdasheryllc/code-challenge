@@ -10,3 +10,7 @@ CTS Code Challenge - Weather App
 
 Skills Demonstrated:
 iOS, Swift, SwiftUI, UIKit, Combine, Reactive Programming, Web Services
+
+> Note: Replace this line with a working API key.
+> 
+> `let apiKey = "{api-key-goes-here}"`
