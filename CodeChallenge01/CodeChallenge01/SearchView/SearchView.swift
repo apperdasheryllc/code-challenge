@@ -5,6 +5,7 @@
 //  Created by Graham Diehl on 5/27/23.
 //
 
+import CoreLocationUI
 import SwiftUI
 
 struct SearchView: View {
@@ -34,10 +35,21 @@ struct SearchView: View {
                     Text(location.name)
                     
                     HStack {
-                        Text(location.state)
+                        Text(location.state ?? "")
                         Text(location.country)
                     }
                     .font(.subheadline)
+                }
+            }
+            
+            Text("search: \(store.state.searchQuery)")
+            Text("count: \(store.state.counter)")
+        }
+        .navigationTitle("Search")
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                LocationButton() {
+                    store.dispatch(.requestedLocation)
                 }
             }
         }

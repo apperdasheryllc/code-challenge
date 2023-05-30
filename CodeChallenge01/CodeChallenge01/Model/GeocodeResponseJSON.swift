@@ -12,7 +12,7 @@ struct GeocodeLocationJSON: Codable {
     let lat: Double
     let lon: Double
     let country: String
-    let state: String
+    var state: String?
 }
 
 extension GeocodeLocationJSON: Identifiable {

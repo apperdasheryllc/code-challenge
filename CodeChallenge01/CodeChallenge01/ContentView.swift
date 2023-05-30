@@ -5,20 +5,17 @@
 //  Created by Graham Diehl on 5/27/23.
 //
 
+import CoreLocationUI
 import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var store: MyStore
     
     var body: some View {
-        VStack {
+        NavigationSplitView {
             SearchView()
-            Text("search: \(store.state.searchQuery)")
-            Text("count: \(store.state.counter)")
-        }
-        .padding()
-        .onTapGesture {
-            store.dispatch(.didTap)
+        } detail: {
+            Text("Hello World")
         }
     }
 }

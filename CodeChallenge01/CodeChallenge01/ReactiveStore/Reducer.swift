@@ -43,6 +43,9 @@ let appReducer: Reducer<AppState, Action> = { state, action in
         
     case .dismissAlert:
         mutatingState.alertInfo = nil
+        
+    case .requestedLocation:
+        print("get user location")
     }
     
     return mutatingState

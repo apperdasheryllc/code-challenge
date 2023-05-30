@@ -14,4 +14,5 @@ enum Action {
     case didFetchGeocodingData(_ data: Data)
     case errorOccurred(error: Error)
     case dismissAlert
+    case requestedLocation
 }

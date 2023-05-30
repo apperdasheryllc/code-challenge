@@ -39,7 +39,8 @@ func getWebServiceUrlString(_ searchQuery: String) -> URL? {
     urlString += "?q=\(searchQuery)"
     urlString += "&limit=5&appid="
     urlString += WebConstants.apiKey
-    guard let url = URL(string: urlString) else {
+    let normalizedString = WebConstants.getUrlString(inputString: urlString)
+    guard let url = URL(string: normalizedString) else {
         return nil
     }
     return url
